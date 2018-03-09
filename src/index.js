@@ -23,7 +23,7 @@ module.exports = {
     router.get('/users/count', (req, res) => {
       bp.users.count()
       .then((count) => {
-        res.send(count)
+        res.send(count.toString())
       })
       .catch((err) => res.status(500).send({ message:err.message }))
     })
